@@ -92,8 +92,8 @@ function playSequence() {
     soundSequence.map((item, i) => {
         setTimeout(() => {
             const btn = $(`.${item.color}`);
-            animateButton(btn);
             item.sound.play();
+            btn.fadeIn(100).fadeOut(100).fadeIn(100);
         }, i * 500);
     })
 }
